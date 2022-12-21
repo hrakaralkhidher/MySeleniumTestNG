@@ -1,7 +1,10 @@
 package MyProjects.Day.Day7;
 
+import MyProjects.Day.utilities.SmartBearUtils;
 import MyProjects.Day.utilities.WebDriverUtil;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -22,8 +25,15 @@ public class c1_SmartBearUtilPractice {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
     }
+    @AfterMethod
+    public void Closing(){
+        driver.close();
+    }
     @Test
     public void TC1_LoginForSmart(){
+        SmartBearUtils.LoginForSmartBearUtil(driver);
+        //6- Verify title equals: Web Orders
+        Assert.assertTrue(driver.getTitle().equals("Web Orders"),"Title Verification failed!!!");
 
     }
 }
