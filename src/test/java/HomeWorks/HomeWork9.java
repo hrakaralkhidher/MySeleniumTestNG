@@ -1,7 +1,6 @@
 package HomeWorks;
 
-import MyProjects.Day.utilities.WebDriverUtil;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import MyProjects.utilities.WebDriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

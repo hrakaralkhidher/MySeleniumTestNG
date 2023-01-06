@@ -1,6 +1,6 @@
 package HomeWorks;
 
-import MyProjects.Day.utilities.WebDriverUtil;
+import MyProjects.utilities.WebDriverUtil;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
